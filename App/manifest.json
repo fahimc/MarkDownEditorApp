@@ -1,0 +1,18 @@
+{
+	"name": "Markdown Editor",
+	"description": "Markdown Editor",
+	"manifest_version":2,
+	"version": "0.1",
+	"app": {
+		"background": {
+			"scripts": ["src/background.js"]
+		}
+	},
+	"permissions": [
+    "webview","tabs","storage"
+  ]
+  ,
+  "icons": {
+    "128": "128.png"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Markdown Editor</title>
+		<meta name="author" content="Tester" />
+		<!-- build:css resource/css/app.css-->
+		<!-- <link type="text/css" rel="stylesheet" href="resource/css/nova.css" /> -->
+		<link type="text/css" rel="stylesheet" href="resource/css/main.css" />
+		<link type="text/css" rel="stylesheet" href="resource/css/github.css" />
+		<!-- endbuild -->
+		<!-- build:js js/app.js-->
+		<script src="lib/markdown/markdown.js"></script>
+		<script src="lib/FileSaver.js"></script>
+		<script  type="text/javascript" src="lib/core/event/EventDispatcher.js"></script>
+		<script type="text/javascript" src="lib/core/util/Localise.js"></script>
+		<script type="text/javascript" src="lib/core/model/DataModel.js"></script>
+		<script type="text/javascript" src="lib/core/util/DataBinder.js"></script>
+		<script type="text/javascript" src="src/controller/MarkDownController.js"></script>
+		<script type="text/javascript" src="src/controller/MainController.js"></script>
+		<script type="text/javascript" src="src/model/CoreModel.js"></script>
+		<script type="text/javascript" src="src/main.js"></script>
+		<!-- endbuild -->
+	</head>
+	<body >
+		<header>
+			<img src="resource/image/25.png" /><h1 data-bind="data.title"></h1>
+			<ul class="menu">
+				<li>
+					<input type="text" value="untitled" id="title" />
+				</li>
+				<li class="import">
+					<button data-bind="data.import"></button>
+					<input type="file" name="files" id="importButton"/>
+				</li>
+				<li>
+					<button id="newButton" data-bind="data.new"></button>
+				</li>
+				<li>
+					<button id="downloadButton" data-bind="data.export"></button>
+				</li>
+				<li><button id="reloadWebview_button">
+				○
+			</button>
+			<button id="minimiseWindow_button">
+				-
+			</button>
+			<button id="maximiseWindow_button">
+				□
+			</button>
+			<button id="closeWindow_button">
+				x
+			</button></li>
+			</ul>
+		</header>
+		<section>
+			<panel id="editor">
+				<textarea id="userInput"></textarea>
+			</panel>
+			<panel id="preview"></panel>
+		</section>
+	</body>
+</html>
+
