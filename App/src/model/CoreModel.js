@@ -5,8 +5,10 @@ var CoreModel=(function(){
 	CoreModel.prototype=
 	{
 		titleInput:null,
+		userInput:null,
 		init:function(){
 			this.titleInput=document.getElementById('title');
+			this.userInput = document.getElementById('userInput');
 		}
 	};
 	

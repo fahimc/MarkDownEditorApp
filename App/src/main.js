@@ -16,22 +16,15 @@
         Localise.removeEventListener('complete', onLocalised);
         bindData();
        
-        setListeners();
+        
 		MarkdownController.init();
 		CoreModel.init();
 		MainController.init();
-    }
-
-    function setListeners() {
-        // document.getElementById('downloadButton').addEventListener('click', function() {
-            // editor.save();
-            // var theContent = editor.exportFile();
-            // var blob = new Blob([theContent], {
-                // type : "text/plain;charset=utf-8"
-            // });
-            // var filesaver = window.saveAs(blob, document.getElementById('title').value+".md");
-// 
-        // });
+		 // chrome.storage.sync.remove('userdata');
+		 // chrome.storage.local.clear();
+// chrome.storage.sync.clear();
+LocalSaveService.load();
+		
     }
 
     function bindData() {

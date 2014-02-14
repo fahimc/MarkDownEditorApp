@@ -9,7 +9,7 @@
 		}
 	},
 	"permissions": [
-    "webview","tabs","storage"
+    "webview","storage","storage"
   ]
   ,
   "icons": {
