@@ -20,6 +20,7 @@ var LocalSaveService = (function() {
                 console.log(obj['userdata']);
                 if (obj['userdata'])
                     CoreModel.userInput.value = obj['userdata'];
+                    MarkdownController.updatePreview();
                 _this.start();
             });
         },
